@@ -36,3 +36,4 @@ All endpoints use the `GET` method.
 - `link/daily-gainers`
 - `link/weekly-losers`
 - `link/weekly-gainers`
+- - `link/company-details/companyname`
