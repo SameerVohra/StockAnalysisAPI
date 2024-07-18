@@ -2,6 +2,8 @@ const { getCompany } = require("./GetCompanyDetails.js");
 const { getResponse } = require("./GetResponse.js");
 const express = require("express");
 const app = express();
+const cors = require("cors");
+app.use(cors({ origin: "*" }));
 
 let url;
 
@@ -60,6 +62,10 @@ app.get("/company-details/:name", (req, res) => {
             res.status(501).send("Internal Server Error")
         });
 });
+
+app.get("/test", (req, res) => {
+    res.send("Testing done");
+})
 
 app.listen(port, () => {
     console.log(`Listening to PORT: ${port}`);
