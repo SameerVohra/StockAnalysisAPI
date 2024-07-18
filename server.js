@@ -63,6 +63,16 @@ app.get("/company-details/:name", (req, res) => {
         });
 });
 
+app.get("/", (req, res) => {
+    res.send({
+        "Get daily gainers": "/daily-gainers",
+        "Get daily losers": "/daily-losers",
+        "Get weekly gainers": "/weekly-gainers",
+        "Get daily losers": "/weekly-losers",
+        "Get company details": "/company-details/companyname",
+    });
+})
+
 app.get("/test", (req, res) => {
     res.send("Testing done");
 })
