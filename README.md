@@ -2,6 +2,8 @@
 
 ## Getting Started
 
+[Check it out](https://stock-analysis-api.vercel.app/)
+
 ### Prerequisites
 
 Ensure you have Node.js installed on your machine. You can download it from [nodejs.org](https://nodejs.org/).
