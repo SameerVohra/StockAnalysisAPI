@@ -34,7 +34,18 @@ To run the project on localhost, follow these steps:
 
 All endpoints use the `GET` method.
 
-- `link/daily-gainers`
-- `link/weekly-losers`
-- `link/weekly-gainers`
-- `link/company-details/companyname`
+- `link/daily-gainers/nse`
+- `link/daily-losers/nse`
+- `link/weekly-losers/nse`
+- `link/weekly-gainers/nse`
+- `link/monthly-gainers/nse`
+- `link/monthly-losers/nse`
+- `link/company-details/companyname/nse`
+
+- `link/daily-gainers/bse`
+- `link/daily-losers/bse`
+- `link/weekly-losers/bse`
+- `link/weekly-gainers/bse`
+- `link/monthly-gainers/bse`
+- `link/monthly-losers/bse`
+- `link/company-details/companyname/bse`

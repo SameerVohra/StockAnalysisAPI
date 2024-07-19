@@ -1,7 +1,7 @@
 const cheerio = require("cheerio");
 const request = require("request");
 
-function getCompany(url) {
+function getCompanyBSE(url) {
     return new Promise((resolve, reject) => {
         request(url, function(error, response, html) {
             if (error) {
@@ -26,18 +26,20 @@ function getCompany(url) {
                 let wk52HL;
 
                 currPrice = $("#ltpid").text().trim();
+
+                console.log(currPrice);
                 change = $("#change").text();
                 percentageChange = $("#ChangePercent").text().trim();
 
-                volume = $("#Volume_nse").text().trim();
-                prev_close = $("#PrevClose_nse").text().trim();
-                dayHL = $("#highlow_nse").text().trim();
-                wk52HL = $("#FiftyTwoHighlow_nse").text().trim();
+                volume = $("#Volume").text().trim();
+                prev_close = $("#PrevClose").text().trim();
+                dayHL = $("#highlow").text().trim();
+                wk52HL = $("#FiftyTwoHighlow").text().trim();
 
                 compName = $(".f20").first().text().trim();
 
                 json.push({
-                    "Stock Exchange": "NSE",
+                    "Stock Exchange": "BSE",
                     "Company Name": compName,
                     "CurrentPrice": currPrice,
                     "PriceChange": change,
@@ -57,4 +59,4 @@ function getCompany(url) {
     })
 }
 
-module.exports = { getCompany };
+module.exports = { getCompanyBSE };

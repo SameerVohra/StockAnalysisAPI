@@ -1,7 +1,7 @@
 const cheerio = require("cheerio");
 const request = require("request");
 
-function getResponse(url) {
+function getResponseBSE(url) {
     return new Promise((resolve, reject) => {
         request(url, function(error, response, html) {
             if (error) {
@@ -23,25 +23,31 @@ function getResponse(url) {
                 const currPrice = [];
                 const change = [];
                 const prevPrice = [];
+                const group = [];
 
                 $('table[class="dataTable"] tbody tr').each(function() {
                     const company = $(this).find('td:nth-child(1) a').text().trim();
-                    const price = $(this).find('td:nth-child(3)').text().trim();
-                    const changeValue = $(this).find('td:nth-child(4)').text().trim();
-                    const previousPrice = $(this).find('td:nth-child(2)').text().trim();
+                    const price = $(this).find('td:nth-child(4)').text().trim();
+                    const changeValue = $(this).find('td:nth-child(5)').text().trim();
+                    const previousPrice = $(this).find('td:nth-child(3)').text().trim();
+                    const grp = $(this).find('td:nth-child(2)').text().trim();
+
 
                     companyName.push(company);
                     currPrice.push(price);
                     change.push(changeValue);
                     prevPrice.push(previousPrice);
+                    group.push(grp);
                 });
 
                 for (let i = 0; i < companyName.length; i++) {
                     json.push({
+                        exchange: "BSE",
                         company: companyName[i],
                         Current_Price: currPrice[i],
                         Change: change[i] + "%",
-                        Previous_Price: prevPrice[i]
+                        Previous_Price: prevPrice[i],
+                        Group: group[i],
                     });
                 }
 
@@ -54,4 +60,4 @@ function getResponse(url) {
     });
 }
 
-module.exports = { getResponse };
+module.exports = { getResponseBSE };
