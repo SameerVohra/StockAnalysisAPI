@@ -32,8 +32,8 @@ To run the project on localhost, follow these steps:
 
 All endpoints use the `GET` method.
 
-- `link/daily-losers`
-- `link/daily-gainers`
-- `link/weekly-losers`
-- `link/weekly-gainers`
-- `link/company-details/companyname`
+- `[link](https://stock-analysis-api.vercel.app)/daily-losers`
+- `[link](https://stock-analysis-api.vercel.app)/daily-gainers`
+- `[link](https://stock-analysis-api.vercel.app)/weekly-losers`
+- `[link](https://stock-analysis-api.vercel.app)/weekly-gainers`
+- `[link](https://stock-analysis-api.vercel.app)/company-details/companyname`
