@@ -169,7 +169,7 @@ app.get("/", (req, res) => {
             "Get weekly gainers": "/weekly-gainers/nse",
             "Get weekly losers": "/weekly-losers/nse",
             "Get mothly gainers": "/monthly-gainers/nse",
-            "Get monthly losers": "/monthly-loser/nse",
+            "Get monthly losers": "/monthly-losers/nse",
             "Get company details": "/company-details/companyname/nse",
         },
         "For BSE": {
@@ -178,7 +178,7 @@ app.get("/", (req, res) => {
             "Get weekly gainers": "/weekly-gainers/bse",
             "Get weekly losers": "/weekly-losers/bse",
             "Get mothly gainers": "/monthly-gainers/bse",
-            "Get monthly losers": "/monthly-loser/bse",
+            "Get monthly losers": "/monthly-losers/bse",
             "Get company details": "/company-details/companyname/bse",
         }
     });
