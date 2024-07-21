@@ -49,3 +49,6 @@ All endpoints use the `GET` method.
 - `link/monthly-gainers/bse`
 - `link/monthly-losers/bse`
 - `link/company-details/companyname/bse`
+
+
+## Will be adding Historic data soon
