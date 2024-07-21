@@ -176,7 +176,7 @@ app.get("/", (req, res) => {
             "Get daily gainers": "/daily-gainers/bse",
             "Get daily losers": "/daily-losers/bse",
             "Get weekly gainers": "/weekly-gainers/bse",
-            "Get daily losers": "/weekly-losers/bse",
+            "Get weekly losers": "/weekly-losers/bse",
             "Get mothly gainers": "/monthly-gainers/bse",
             "Get monthly losers": "/monthly-loser/bse",
             "Get company details": "/company-details/companyname/bse",
