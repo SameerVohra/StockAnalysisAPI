@@ -39,8 +39,8 @@ function getCompanyBSE(url) {
                 compName = $(".f20").first().text().trim();
 
                 json.push({
-                    "Stock Exchange": "BSE",
-                    "Company Name": compName,
+                    "Stock_Exchange": "BSE",
+                    "Company _Name": compName,
                     "CurrentPrice": currPrice,
                     "PriceChange": change,
                     "PercentageChange": percentageChange,

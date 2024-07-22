@@ -37,8 +37,8 @@ function getCompanyNSE(url) {
                 compName = $(".f20").first().text().trim();
 
                 json.push({
-                    "Stock Exchange": "NSE",
-                    "Company Name": compName,
+                    "Stock_Exchange": "NSE",
+                    "Company_Name": compName,
                     "CurrentPrice": currPrice,
                     "PriceChange": change,
                     "PercentageChange": percentageChange,
