@@ -40,7 +40,7 @@ function getCompanyBSE(url) {
 
                 json.push({
                     "Stock_Exchange": "BSE",
-                    "Company _Name": compName,
+                    "Company_Name": compName,
                     "CurrentPrice": currPrice,
                     "PriceChange": change,
                     "PercentageChange": percentageChange,
